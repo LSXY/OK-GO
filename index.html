@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>老少咸宜</title>
+	<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+		h1 {
+			position: absolute;
+			width: 100%;
+			margin-top: -100px;
+			top: 50%;
+			font-size: 50px;
+			/*color: #003EDF;*/
+			text-align: center;
+			transition: 0.333s ease;
+		}
+	</style>
+</head>
+<body>
+	<h1>老少咸宜<br/>suitable for both young and old.</h1>
+	<script>
+		var color = 100,h1 = document.getElementsByTagName('h1')[0],
+		r = null,
+		mark = function (){
+			r = parseInt(Math.random() * 255);
+			g = parseInt(Math.random() * 255);
+			b = parseInt(Math.random() * 255);
+			h1.style.color = 'rgb(' + r + ',' + g + ',' + b + ')';
+			setTimeout(mark, 333);
+		};
+		mark();
+	</script>
+</body>
+</html>
